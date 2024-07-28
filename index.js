@@ -7,7 +7,7 @@ app.use((req, res) => {
     console.log(req)
     res.status(200).json({message: 'hello this is express project\n\n\n', headers: req.headers});
 });
-
-app.listen(8000, (e) => {
-    console.log('app is listending on 8000', e);
+const PORT = process.env.PORT || 8000
+app.listen(PORT, () => {
+    console.log('app is listending on', PORT);
 });
